@@ -3,12 +3,12 @@ function keys(e: any) {
   return Object.keys(e).filter((key) => isNaN(Number(key)));
 }
 
-function values<T extends number | string>(e: any): T[];
+function values<T = number | string>(e: any): T[];
 function values(e: any) {
   return keys(e).map((key) => e[key]);
 }
 
-function entries<T extends number | string>(e: any): [string, T][];
+function entries<T = number | string>(e: any): [string, T][];
 function entries(e: any) {
   return keys(e).map((key) => [key, e[key]]);
 }
