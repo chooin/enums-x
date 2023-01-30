@@ -20,4 +20,7 @@ enums.entries(NumericEnums)
 
 enums.length(NumericEnums)
 // 3
+
+enums.key(NumericEnums, NumericEnums.A)
+// A
 ```

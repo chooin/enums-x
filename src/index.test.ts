@@ -50,3 +50,13 @@ describe('test length', () => {
     expect(enums.length(StringEnums)).toEqual(2)
   })
 })
+
+describe('test key', () => {
+  test('numeric key', () => {
+    expect(enums.key(NumericEnums, NumericEnums.A)).toEqual('A')
+  })
+
+  test('string key', () => {
+    expect(enums.key(StringEnums, StringEnums.你好)).toEqual('你好')
+  })
+})
