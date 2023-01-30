@@ -18,7 +18,7 @@ function length(e: any) {
   return keys(e).length;
 }
 
-function key(e: any, v: any): string | number;
+function key(e: any, v: any): string;
 function key(e: any, v: any) {
   return entries(e).find(([, _]) => _ === v)![0];
 }
