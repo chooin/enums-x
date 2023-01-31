@@ -59,4 +59,12 @@ describe('test key', () => {
   test('string key', () => {
     expect(enums.key(StringEnums, StringEnums.你好)).toEqual('你好')
   })
+
+  test('numeric key', () => {
+    expect(enums.key(NumericEnums, 10)).toEqual(10)
+  })
+
+  test('string key', () => {
+    expect(enums.key(StringEnums, 10)).toEqual(10)
+  })
 })

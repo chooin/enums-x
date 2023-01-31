@@ -20,7 +20,13 @@ function length(e: any) {
 
 function key(e: any, v: any): string;
 function key(e: any, v: any) {
-  return entries(e).find(([, _]) => _ === v)![0];
+  const found = entries(e).find(([, _]) => _ === v);
+
+  if (found) {
+    return found[0];
+  } else {
+    return v;
+  }
 }
 
 export default {
