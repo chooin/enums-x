@@ -61,10 +61,10 @@ describe('test key', () => {
   })
 
   test('numeric key', () => {
-    expect(enums.key(NumericEnums, 10)).toEqual(10)
+    expect(enums.key(NumericEnums, 10)).toEqual(undefined)
   })
 
   test('string key', () => {
-    expect(enums.key(StringEnums, 10)).toEqual(10)
+    expect(enums.key(StringEnums, 10)).toEqual(undefined)
   })
 })

@@ -18,15 +18,11 @@ function length(e: any) {
   return keys(e).length;
 }
 
-function key(e: any, v: any): string;
-function key(e: any, v: any) {
+function key<T = string | undefined>(e: any, v: number | string): T;
+function key(e: any, v: number | string) {
   const found = entries(e).find(([, _]) => _ === v);
 
-  if (found) {
-    return found[0];
-  } else {
-    return v;
-  }
+  return found?.[0];
 }
 
 export default {
